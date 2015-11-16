@@ -1,0 +1,34 @@
+#!/bin/bash
+
+cat > $BEEKEEPER_TO_SOURCE_IN << 'SETUP_PATH'
+#!/bin/bash
+
+if [ -z "$BEEKEEPER_BASH_SETUP_PATH" ]; then
+    if [ -d "$HOME/.rbenv/bin" ]; then
+        export PATH="$HOME/.rbenv/bin:$PATH"
+    fi
+
+    if [ -d "/usr/local/opt/go/libexec/bin" ]; then
+        export PATH=$PATH:/usr/local/opt/go/libexec/bin
+    fi
+
+    if [ -z "$GOPATH" ]; then
+        export GOPATH=$HOME/go
+    fi
+
+    if [ -d "$GOPATH" ]; then
+        export PATH=$PATH:$GOPATH/bin
+    fi
+
+    export PATH=/usr/local/bin:$PATH
+
+    if [ -e "/usr/libexec/java_home" ]; then
+        export JAVA_HOME=$(/usr/libexec/java_home)
+    fi
+
+    export BEEKEEPER_BASH_SETUP_PATH=1
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+fi
+
+SETUP_PATH

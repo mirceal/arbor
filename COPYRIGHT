@@ -1,0 +1,19 @@
+Silva is built incrementally on the Beekeeper tool. 
+Arbor is built incrementally on the Beehives that came with the Beekeeper tool. 
+In the context of these forks, Both projects were renamed to make it clear it's derivative work that's individually maintained.
+
+Beekeeper 
+Copyright 2015 usermindinc
+You can see and browse the original version of the code here :
+https://github.com/usermindinc/beekeeper/tree/3c4b483258d170f321ac788ce34f7df515a2042f
+
+Beehives
+Copyright 2015 usermindinc
+You can see and browse the original version of the code here :
+https://github.com/usermindinc/beehives/tree/262374863369ff81476e7a6ffb8011c02bd373f3
+
+All other changes in Silva and Arbor:
+Copyright 2015 Mircea Livadariu
+
+All code is under the Apache License 2.0 (LICENSE in root of this repo or http://www.apache.org/licenses/LICENSE-2.0)
+

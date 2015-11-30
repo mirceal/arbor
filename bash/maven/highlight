@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat > $BEEKEEPER_TO_SOURCE_IN << 'SETUP_MVN_COLOR'
+cat > $SILVA_TO_SOURCE_IN << 'SETUP_MVN_COLOR'
 #!/bin/bash
 # taken from https://raw.githubusercontent.com/builddoctor/maven-antsy-color/master/mvn
 

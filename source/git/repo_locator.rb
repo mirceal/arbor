@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby_beekeeper_wrapper
+#!/usr/bin/env ruby_silva_wrapper
 require 'hive/support/dynamic'
 options = Hive::Support::Dynamic.new.options
 

@@ -1,9 +1,9 @@
 #!/bin/bash
 
-cat > $BEEKEEPER_TO_SOURCE_IN << 'SETUP_BASH'
+cat > $SILVA_TO_SOURCE_IN << 'SETUP_BASH'
 #!/bin/bash
 
-if [ -z "$BEEKEEPER_BASH_SETUP_HISTORY" ]; then
+if [ -z "$SILVA_BASH_SETUP_HISTORY" ]; then
     # making history!!!1111
     # Eternal bash history.
     # ---------------------
@@ -20,7 +20,7 @@ if [ -z "$BEEKEEPER_BASH_SETUP_HISTORY" ]; then
     # http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
     shopt -s histappend
     export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-    export BEEKEEPER_BASH_SETUP_HISTORY=1
+    export SILVA_BASH_SETUP_HISTORY=1
 fi
 
 SETUP_BASH

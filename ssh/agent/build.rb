@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby_beekeeper_wrapper
+#!/usr/bin/env ruby_silva_wrapper
 require 'yaml'
 require 'fileutils'
 require 'ssh/ident'
@@ -14,9 +14,9 @@ begin
     fail 'missing keys' unless options[:params].key?(:keys) && options[:params][:keys].is_a?(Array)
     ssh_agent_dir = options[:params]['agent_dir']
     ssh_agent_dir ||= 'ssh_agent'
-    ENV['DIR_IDENTITIES'] = File.join(ENV['BEEKEEPER_BASE_DIR'], ssh_agent_dir, 'identities')
-    ENV['DIR_AGENTS'] = File.join(ENV['BEEKEEPER_BASE_DIR'], ssh_agent_dir, 'agents')
-    ssh_agent_dir = File.join(ENV['BEEKEEPER_BASE_DIR'], ssh_agent_dir, 'identities', options[:params][:identity])
+    ENV['DIR_IDENTITIES'] = File.join(ENV['SILVA_BASE_DIR'], ssh_agent_dir, 'identities')
+    ENV['DIR_AGENTS'] = File.join(ENV['SILVA_BASE_DIR'], ssh_agent_dir, 'agents')
+    ssh_agent_dir = File.join(ENV['SILVA_BASE_DIR'], ssh_agent_dir, 'identities', options[:params][:identity])
     FileUtils.mkdir_p(ssh_agent_dir) unless File.exist?(ssh_agent_dir)
     options[:params][:keys].each do |key|
       key_name = File.basename(key)
